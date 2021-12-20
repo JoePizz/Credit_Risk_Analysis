@@ -1,10 +1,10 @@
 # Credit_Risk_Analysis
 
 <p>**Overview**<p>
-<p> The purpose of this analysis is to help a peer-to-peer lending services company LendingClub, use the Loan Stats data to find a model that appropriately predicts credit risk <p>
+<p> The purpose of this analysis is to help a peer-to-peer lending services company LendingClub, use the Loan Stats data to find a model that appropriately predicts credit risk.<p>
   
 <p> **Results**<p>
-  Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models. Use screenshots of your outputs to support your results.
+
 <p>Naive Random Oversampling<p>
 <p>https://github.com/JoePizz/Credit_Risk_Analysis/blob/main/Screenshots/Naive_Random_Oversampling.png<p>
 <p>Accuracy score: 64.03%<p>
@@ -14,7 +14,7 @@
 <p>Recall<p>
     <p>High risk: 0.62<p>
     <p>Low risk: 0.66<p>
-<p>
+<p>In Naive oversampling the majority class is discarded until a more balanced distribution is reached. This would explain why the Recall scores of the high risk and the low risk are fairly close to one another.<p>
   
 <p>SMOTE Oversampling<p>
 <p>https://github.com/JoePizz/Credit_Risk_Analysis/blob/main/Screenshots/SMOTE_Oversampling.png<p>
@@ -25,6 +25,7 @@
 <p>Recall<p>
     <p>High risk: 0.61<p>
     <p>Low risk: 0.69<p>
+<p>SMOTE Oversampling involves duplicating data from the minority class so that the model has more data to learn from.<p>
 <p>ClusterCentroids resampler<p>
 <p>https://github.com/JoePizz/Credit_Risk_Analysis/blob/main/Screenshots/Undersampling.png<p>
 <p>Accuracy score: 65.15%<p>
@@ -64,9 +65,11 @@
 <p>Recall<p>
     <p>High risk: 0.92<p>
     <p>Low risk: 0.94<p>
-<p>-->Highest racall scores for Low Risk and High Risk as well as the highest Accuracy Score of all the algorithms.<p>
+<p>-->Highest recall scores for Low Risk and High Risk as well as the highest Accuracy Score of all the algorithms.<p>
 
 <p>**Summary**<p>
 
 <p>It appears that the OverSampling had better recall scores than that of the resampling methods.<p>
-<p>As this is a peer to peer lending service the company may want to focus more on eliminating high risk credit scores than identifying low risk credit scores. As lending from individuals is already more risky than lending from a financial institution, the less high risk credit scores that are brought in, the more successful the platform will become.<p>I would recommend using the AdaBoostClassifier. This algorithm not only is able to identify low risk credit but is also able to identify high risk credit as well.<p>
+<p>As this is a peer to peer lending service the company may want to focus more on identifying the high risk credit scores than identifying low risk credit scores. As lending from individuals is already more risky than lending from a financial institution, the less high risk credit scores that are brought in, the more successful the platform will become.<p>
+<p>I would recommend using the AdaBoostClassifier. This algorithm not only is able to identify low risk credit but is also able to identify high risk credit as well as seen in it having the highest recall for high and low risk. Having the highest recall means that of all the models, the EasyEnsembleClassifier identified the most amount of the total positives.<p>
+
