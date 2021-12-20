@@ -66,7 +66,7 @@
     <p>Low risk: 0.94<p>
 <p>-->Highest racall scores for Low Risk and High Risk as well as the highest Accuracy Score of all the algorithms.<p>
 
-<p>**##Summary**##<p>
+<p>**Summary**<p>
 
 <p>It appears that the OverSampling had better recall scores than that of the resampling methods.<p>
 <p>As this is a peer to peer lending service the company may want to focus more on eliminating high risk credit scores than identifying low risk credit scores. As lending from individuals is already more risky than lending from a financial institution, the less high risk credit scores that are brought in, the more successful the platform will become.<p>I would recommend using the AdaBoostClassifier. This algorithm not only is able to identify low risk credit but is also able to identify high risk credit as well.<p>
